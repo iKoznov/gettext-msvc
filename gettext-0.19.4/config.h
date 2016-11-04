@@ -409,7 +409,10 @@
 /* #undef HAVE_MBSLEN */
 
 /* Define to 1 if <wchar.h> declares mbstate_t. */
+#if (_MSC_VER >= 1900)
+#else
 #define HAVE_MBSTATE_T 1
+#endif
 
 /* Define to 1 if you have the `memmove' function. */
 #define HAVE_MEMMOVE 1
@@ -1534,7 +1537,10 @@
 #endif
 
 /* Define to a type if <wchar.h> does not define. */
+#if (_MSC_VER >= 1900)
+#else
 /* #undef mbstate_t */
+#endif
 
 /* Define to `int' if <sys/types.h> does not define. */
 /* #undef mode_t */
