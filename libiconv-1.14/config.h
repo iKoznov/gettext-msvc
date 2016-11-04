@@ -174,7 +174,10 @@
 /* #undef HAVE_MBSINIT */
 
 /* Define to 1 if <wchar.h> declares mbstate_t. */
+#if (_MSC_VER >= 1900)
+#else
 /* #undef HAVE_MBSTATE_T */
+#endif
 
 /* Define to 1 if you have the `memmove' function. */
 #define HAVE_MEMMOVE 1^
@@ -380,7 +383,10 @@
 
 
 /* Define to a type if <wchar.h> does not define. */
+#if (_MSC_VER >= 1900)
+#else
 #define mbstate_t int
+#endif
 
 /* Define to a replacement function name for realpath(). */
 #define realpath rpl_realpath
