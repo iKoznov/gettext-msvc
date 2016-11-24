@@ -95,7 +95,7 @@ extern int libintl_version;
 # else
 #  ifdef __cplusplus
 #   define _INTL_REDIRECT_INLINE
-#  else
+#  elif !defined _MSC_VER
 #   define _INTL_REDIRECT_MACROS
 #  endif
 # endif
